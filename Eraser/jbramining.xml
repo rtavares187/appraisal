@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<javabramining>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	-->
+	<!--  						CONFIGURATION 								-->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	-->
+	
+	<configuration>
+		<databaseHandler>javabramining.core.database</databaseHandler>
+	</configuration>
+	
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	-->
+	<!--  						PRE-PROCESSING 								-->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~	-->
+	
+	<preprocessing>
+		<operation name="Eraser">
+			<kddcomponent>	
+				<name>Eraser</name>
+				
+				<kddscreen>eraser.EraserScreen</kddscreen>
+				<kddmethod>eraser.EraserMethod</kddmethod>
+						
+				<description></description>
+			</kddcomponent>								
+		</operation>		
+	</preprocessing>
+	
+	<mining />
+	
+	<posprocessing />
+		
+
+</javabramining>

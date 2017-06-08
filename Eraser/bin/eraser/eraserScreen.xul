@@ -1,0 +1,128 @@
+<panel weightx="1" weighty="1" columns="1">
+<panel top="10" bottom="10" left="10" right="10" gap="10" columns="4">
+	<label text="Original Database:" /><combobox name="databaseCombo" action="databaseSelected()" weightx="1" />
+	<label text="Destination Database:" /><textfield name="destinationDatabaseField" weightx="1" />
+</panel>
+<panel top="10" bottom="10" left="10" right="10" gap="10" columns="2" weightx="1" weighty="1">
+<tabbedpane placement="top" selected="0" weightx="1" weighty="1">
+  <tab text="MCAR">
+  	<panel top="10" bottom="10" left="10" right="10" gap="10" columns="1" weightx="1" weighty="1">
+  		<panel weighty="1" border="true" text="Attributes" top="5" bottom="5" left="5" right="5" gap="5" columns="3" weightx="1">
+			<panel weightx="1" weighty="1" columns="1" left="5" right="5" top="5" bottom="5">
+				<list name="mcar_attributeList" weightx="1" weighty="1" selection="multiple" />
+			</panel>
+			<panel weighty="1" columns="2" gap="10" halign="center" valign="center">
+				<button text=">" action="add()" />
+				<button text=">>" action="addAll()" />
+				<button text="<" action="remove()" />
+				<button text="<<" action="removeAll()" />
+			</panel>
+			<panel weightx="1" weighty="1" columns="1" left="5" right="5" top="5" bottom="5">
+				<list name="mcar_selectedAttributeList" weightx="1" weighty="1" selection="multiple" />
+			</panel>	  			
+  		</panel> 	
+  		<panel border="true" text="Distribution" top="8" bottom="8" left="8" right="8" gap="10" columns="2" weightx="1">
+  			<checkbox name="columnTargetCheckBox" text="For Each Column" group="dirtScope" selected="true"/>
+			<checkbox name="cellTargetCheckBox" text="By Database Cells" group="dirtScope"/>
+  		</panel>
+  		<panel border="true" text="Percentual" top="8" bottom="8" left="8" right="8" gap="10" columns="2" weightx="1">
+  			<slider name="mcar_slider" unit="5" weightx="1" value="30" action="slider('mcar')"/>
+  			<label name="mcar_sliderlabel" text="30%" />
+  		</panel>
+  		<panel weightx="1" halign="center" valign="center" gap="20">
+			<button text="OK" width="180" action="ok('mcar')" />
+			<button text="Close" width="180" action="close()" />
+  		</panel>  	
+	</panel>
+  </tab>
+  <tab text="MAR">
+	<panel top="10" bottom="10" left="10" right="10" gap="10" columns="1" weightx="1" weighty="1">
+  		<panel weightx="1" weighty="1" border="true" text="Attributes" top="5" bottom="5" left="5" right="5" gap="5" columns="2">
+			<panel weightx="1" weighty="1" columns="1" left="5" right="5" top="5" bottom="5">
+				<list name="mar_attributeList" weightx="1" weighty="1" action="mar_attributeSelected()" />
+			</panel>
+			<panel weightx="1" weighty="1" columns="2" left="5" right="5" top="5" bottom="5" gap="5" columns="1">
+				<panel weightx="1" columns="4" gap="10" halign="center">
+					<panel columns="2">
+						<label text="Attribute:  " />
+						<combobox name="mar_attributeCombobox" />
+					</panel>
+					<panel columns="2">
+						<label text="Op:  " />
+						<combobox name="mar_operationCombobox" columns="3">
+						  <choice text="=" />
+						  <choice text="!=" />
+	  					  <choice text=">" />
+	  					  <choice text="<" />
+		  				  <choice text=">=" />
+		  				  <choice text="<=" />
+						</combobox>
+					</panel>
+					<panel columns="2">
+						<label text="Value:  " />
+						<textfield columns="5" name="mar_valueTextfield" />
+					</panel>
+					<button text="Add" action="mar_addRule()" />
+				</panel>
+				<panel weightx="1" weighty="1" columns="2" gap="5">
+					<list weightx="1" weighty="1" name="mar_rulesList" colspan="2" />
+					<button text="Remove" weightx="1" action="mar_removeRule()" />
+					<button text="Remove All" weightx="1" action="mar_removeAllRules()" />					
+				</panel>
+			</panel>	
+  		</panel> 	
+  		<panel border="true" text="Percentual" top="8" bottom="8" left="8" right="8" gap="10" columns="2" weightx="1">
+  			<slider name="mar_slider" unit="5" weightx="1" value="30" action="slider('mar')"/>
+  			<label name="mar_sliderlabel" text="30%" />
+  		</panel>
+  		<panel weightx="1" halign="center" valign="center" gap="20">
+			<button text="OK" width="180" action="ok('mar')" />
+			<button text="Close" width="180" action="close()" />
+  		</panel>  	
+	</panel>
+  </tab>
+  <tab text="NMR">
+	<panel top="10" bottom="10" left="10" right="10" gap="10" columns="1" weightx="1" weighty="1">
+  		<panel weightx="1" weighty="1" border="true" text="Attributes" top="5" bottom="5" left="5" right="5" gap="5" columns="2">
+			<panel weightx="1" weighty="1" columns="1" left="5" right="5" top="5" bottom="5">
+				<list name="nmr_attributeList" weightx="1" weighty="1" />
+			</panel>
+			<panel weightx="1" weighty="1" columns="2" left="5" right="5" top="5" bottom="5" gap="5" columns="1">
+				<panel weightx="1" columns="3" gap="10" halign="center">
+					<panel columns="2">
+						<label text="Op:  " />
+						<combobox name="nmr_operationCombobox" columns="3">
+						  <choice text="=" />
+						  <choice text="!=" />
+	  					  <choice text=">" />
+	  					  <choice text="<" />
+		  				  <choice text=">=" />
+		  				  <choice text="<=" />
+						</combobox>
+					</panel>
+					<panel columns="2">
+						<label text="Value:  " />
+						<textfield columns="5" name="nmr_valueTextfield" />
+					</panel>
+					<button text="Add" action="nmr_addRule()" />
+				</panel>
+				<panel weightx="1" weighty="1" columns="2" gap="5">
+					<list weightx="1" weighty="1" name="nmr_rulesList" colspan="2" />
+					<button text="Remove" weightx="1" action="nmr_removeRule()" />
+					<button text="Remove All" weightx="1" action="nmr_removeAllRules()" />					
+				</panel>
+			</panel>	
+  		</panel> 	
+  		<panel border="true" text="Percentual" top="8" bottom="8" left="8" right="8" gap="10" columns="2" weightx="1">
+  			<slider name="nmr_slider" unit="5" weightx="1" value="30" action="slider('nmr')"/>
+  			<label name="nmr_sliderlabel" text="30%" />
+  		</panel>
+  		<panel weightx="1" halign="center" valign="center" gap="20">
+			<button text="OK" width="180" action="ok('nmr')" />
+			<button text="Close" width="180" action="close()" />
+  		</panel>  	
+	</panel>
+  </tab>
+</tabbedpane>
+</panel>
+</panel>

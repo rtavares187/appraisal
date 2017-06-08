@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src.crowner"/>
+	<classpathentry kind="src" path="src.reviewer"/>
+	<classpathentry kind="src" path="src.comite"/>
+	<classpathentry kind="src" path="src.common"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/commons/commons-collections.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="lib/jdm/jdm.jar"/>
+	<classpathentry kind="lib" path="lib/jgap/jgap.jar"/>
+	<classpathentry kind="lib" path="lib/joone/joone-engine.jar"/>
+	<classpathentry kind="lib" path="lib/jswarm/jswarm-pso.jar"/>
+	<classpathentry kind="lib" path="lib/junit/junit-4.1.jar"/>
+	<classpathentry kind="lib" path="lib/log4j/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="lib/mysql/mysql-connector-java-3.1.6-bin.jar"/>
+	<classpathentry kind="lib" path="lib/poi/jxl.jar"/>
+	<classpathentry kind="lib" path="lib/spring/commons-dbcp-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/thinlet/thinlet-2005-03-28.jar"/>
+	<classpathentry kind="lib" path="lib/commons/commons-lang.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb/jaxb-libs.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb/relaxngDatatype-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/jaxb/xsdlib.jar"/>
+	<classpathentry kind="lib" path="lib/math/jmt/jmatharray.jar"/>
+	<classpathentry kind="lib" path="lib/poi/poi-3.0-alpha1-20050704.jar"/>
+	<classpathentry kind="lib" path="lib/spring/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/spring/commons-pool-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/spring/spring-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/math/colt/colt.jar"/>
+	<classpathentry kind="lib" path="lib/math/jama/Jama-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/math/mtj/mtj.jar"/>
+	<classpathentry kind="lib" path="lib/math/colt/concurrent.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart/jcommon-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart/jfreechart-1.0.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
