@@ -13,7 +13,6 @@
 	<classpathentry kind="lib" path="lib/jswarm/jswarm-pso.jar"/>
 	<classpathentry kind="lib" path="lib/junit/junit-4.1.jar"/>
 	<classpathentry kind="lib" path="lib/log4j/log4j-1.2.13.jar"/>
-	<classpathentry kind="lib" path="lib/mysql/mysql-connector-java-3.1.6-bin.jar"/>
 	<classpathentry kind="lib" path="lib/poi/jxl.jar"/>
 	<classpathentry kind="lib" path="lib/spring/commons-dbcp-1.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/thinlet/thinlet-2005-03-28.jar"/>
@@ -33,5 +32,6 @@
 	<classpathentry kind="lib" path="lib/math/colt/concurrent.jar"/>
 	<classpathentry kind="lib" path="lib/jfreechart/jcommon-1.0.0.jar"/>
 	<classpathentry kind="lib" path="lib/jfreechart/jfreechart-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/mysql/mysql-connector-java-5.1.41-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

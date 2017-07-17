@@ -1,0 +1,7 @@
+USE jb_pima_indians
+
+LOAD DATA LOCAL INFILE 'W:/CEFET/workflow/gitAppraisal/appraisal/Bases/pima_indians/pima-indians-diabetes.data.numerada.csv' 
+INTO TABLE pima_indians
+  FIELDS TERMINATED BY ','
+  LINES TERMINATED BY '\r\n'
+  IGNORE 1 LINES;
