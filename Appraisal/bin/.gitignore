@@ -1,4 +1,3 @@
-/appraisal/
 /classification/
 /comite/
 /common/
@@ -6,7 +5,4 @@
 /correlation/
 /database/
 /entities/
-/log4j.properties
-/pca/
 /util/
-/visual/

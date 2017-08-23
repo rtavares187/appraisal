@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+		
+	<!-- ======================== HANDLERS ======================== -->
+		
+	<bean id="databaseHandler" class="database.MySQLHandler">
+  		<property name="dataSource"><ref local="dataSource"/></property>
+  	</bean>	
+
+	<!-- ======================= DATABASE ======================== -->
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close" abstract="false" lazy-init="default" autowire="default" dependency-check="default">
+  		<property name="driverClassName" value="com.mysql.jdbc.Driver" /> 
+  		<property name="url" value="jdbc:mysql://192.168.1.185:3306/" /> 
+  		<property name="username" value="root" /> 
+  		<property name="password" value="root@123" /> 
+  	</bean>
+
+</beans>

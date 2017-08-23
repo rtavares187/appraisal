@@ -1,0 +1,7 @@
+USE jb_breast_cancer
+
+LOAD DATA LOCAL INFILE 'W:/CEFET/workflow/gitAppraisal/appraisal/Bases/breast_cancer/breast-cancer-wisconsin.data.numerada.csv' 
+INTO TABLE breast_cancer
+  FIELDS TERMINATED BY ','
+  LINES TERMINATED BY '\r\n'
+  IGNORE 1 LINES;

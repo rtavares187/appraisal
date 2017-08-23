@@ -13,10 +13,10 @@ public class NumberingFile {
 			
 			boolean header = true;
 			
-			String sfileOriginal = "W:\\CEFET\\workflow\\gitAppraisal\\appraisal\\Bases\\pima_indians\\pima-indians-diabetes.data.csv";
+			String sfileOriginal = "W:\\CEFET\\workflow\\gitAppraisal\\appraisal\\Bases\\breast_cancer\\breast-cancer-wisconsin.data.csv";
 			File fileOriginal = new File(sfileOriginal);
 			
-			String dfileNumerada = "W:\\CEFET\\workflow\\gitAppraisal\\appraisal\\Bases\\pima_indians\\pima-indians-diabetes.data.numerada.csv";
+			String dfileNumerada = "W:\\CEFET\\workflow\\gitAppraisal\\appraisal\\Bases\\breast_cancer\\breast-cancer-wisconsin.data.numerada.csv";
 			File fileNumerada = new File(dfileNumerada);
 			
 			if(!fileNumerada.exists())
