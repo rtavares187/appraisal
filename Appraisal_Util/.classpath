@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/mysql/mysql-connector-java-5.1.41-bin.jar"/>
+	<classpathentry kind="lib" path="lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.16.jar"/>
+	<classpathentry kind="lib" path="lib/poi-examples-3.16.jar"/>
+	<classpathentry kind="lib" path="lib/poi-excelant-3.16.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.16.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.16.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.16.jar"/>
+	<classpathentry kind="lib" path="lib/geronimo-jms_1.1_spec-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/mail-1.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.16 (1).jar"/>
+	<classpathentry kind="lib" path="lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

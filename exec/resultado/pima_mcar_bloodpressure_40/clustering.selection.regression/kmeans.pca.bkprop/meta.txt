@@ -1,0 +1,3 @@
+id:[bkprop.momentum=0.7][bkprop.cycles=3000][bkprop.learningRate=0.5];[pca.columns=6.0];[kmeans.centroids=2.0][kmeans.distance=euclidian][kmeans.initial=firstTuples][kmeans.iterations=1000]
+time:6557.24
+median_time:37.469942857142854

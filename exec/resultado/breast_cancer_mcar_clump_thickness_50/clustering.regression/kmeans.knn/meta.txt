@@ -1,0 +1,3 @@
+id:[knn.distance=euclidian][knn.k=66.0];[kmeans.centroids=3.0][kmeans.distance=euclidian][kmeans.initial=firstTuples][kmeans.iterations=1000]
+time:116.1280000000005
+median_time:0.06751627906976773
