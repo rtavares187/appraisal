@@ -1,0 +1,3 @@
+id:[knn.k=5.0][knn.distance=euclidian]
+time:13.202
+median_time:1.3202

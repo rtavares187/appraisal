@@ -1,3 +1,0 @@
-id:[bkprop.momentum=0.7][bkprop.cycles=3000][bkprop.learningRate=0.5]
-time:28.876
-median_time:28.876

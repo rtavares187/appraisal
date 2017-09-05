@@ -1,0 +1,3 @@
+id:[pca.columns=6.0];[knn.distance=euclidian][knn.k=32.0]
+time:840.1759999999947
+median_time:0.2966723163841789

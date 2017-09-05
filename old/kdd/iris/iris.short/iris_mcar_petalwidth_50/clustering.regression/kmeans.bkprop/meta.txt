@@ -1,0 +1,3 @@
+id:[bkprop.momentum=0.7][bkprop.learningRate=0.5][bkprop.cycles=3000];[kmeans.centroids=4.0][kmeans.iterations=1000][kmeans.initial=firstTuples][kmeans.distance=manhattan]
+time:454.15299999999996
+median_time:45.415299999999995

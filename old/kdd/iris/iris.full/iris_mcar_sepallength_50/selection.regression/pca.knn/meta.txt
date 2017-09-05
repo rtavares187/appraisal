@@ -1,0 +1,3 @@
+id:[pca.columns=2.0];[knn.distance=manhattan][knn.k=10.0]
+time:6.875999999999985
+median_time:0.02291999999999995

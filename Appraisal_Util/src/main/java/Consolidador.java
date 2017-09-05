@@ -22,7 +22,8 @@ import org.apache.poi.xssf.usermodel.XSSFFormulaEvaluator;
 
 public class Consolidador {
 	
-	private static final String PASTA_RAIZ = "W:\\CEFET\\workflow\\gitAppraisal\\appraisal\\exec\\resultado";
+	//private static final String PASTA_RAIZ = "W:\\CEFET\\workflow\\gitAppraisal\\appraisal\\exec\\resultado";
+	private static final String PASTA_RAIZ = "W:\\CEFET\\workflow\\gitAppraisal\\appraisal\\exec\\resultado_old";
 	
 	private static final String PASTA_CONSOLIDADO = PASTA_RAIZ + "\\consolidado";
 	
@@ -103,7 +104,10 @@ public class Consolidador {
 				
 				Statement stmt = connection.createStatement();
 				
-				ResultSet rs = stmt.executeQuery(execucao.getBaseSQL());
+				//ResultSet rs = stmt.executeQuery(execucao.getBaseSQL());
+				
+				List<String> idsOr = getIdsOriginais(execucao);
+				ResultSet rs = stmt.executeQuery(execucao.getBaseSQL2(idsOr));
 				
 				while(rs.next())
 					execucao.getHashIdValor().put(rs.getLong(1), rs.getDouble(2));
@@ -435,6 +439,52 @@ public class Consolidador {
 			e.printStackTrace();
 			
 		}
+		
+	}
+	
+	private static List<String> getIdsOriginais(Execucao execucao) throws Exception {
+		
+		List<String> idsOr = new ArrayList<String>();
+		
+		String fileRPrefix = null;
+		
+		if("iris".equals(execucao.getId_ex()))
+			fileRPrefix = "iris";
+		
+		else if("pima".equals(execucao.getId_ex()))
+			fileRPrefix = "pima";
+		
+		else if("breastcancer".equals(execucao.getId_ex()))
+			fileRPrefix = "breast_cancer";
+		
+		String baseFileName = null;
+        
+        if("breast_cancer".equals(fileRPrefix))
+        	baseFileName = PASTA_RAIZ + "\\" + fileRPrefix + "_mcar_" + execucao.getBd_campo() + "_";
+        	
+        else
+        	baseFileName = PASTA_RAIZ + "\\" + fileRPrefix + "_mcar_" + execucao.getBd_campo().replace("_", "") + "_";
+        
+        if(baseFileName.indexOf("seruminsulin") != -1)
+        	baseFileName = baseFileName.replaceAll("seruminsulin", "seruminsulim");
+		
+        Scanner scan = new Scanner(new File(baseFileName + execucao.getBd_table_alvo_percentual() + "\\clustering.regression\\kmeans.avg\\targetRegression.txt"));
+        
+        while(scan.hasNextLine()){
+        	
+        	String line = scan.nextLine();
+			if("".equals(line.trim()))
+				continue;
+			
+			String id = line.substring(5, (line.indexOf("	") + 1));
+        	
+			idsOr.add(id);
+			
+        }
+        
+        scan.close();
+        
+        return idsOr;
 		
 	}
 	

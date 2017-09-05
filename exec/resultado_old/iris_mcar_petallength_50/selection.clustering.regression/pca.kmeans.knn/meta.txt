@@ -1,0 +1,3 @@
+id:[pca.columns=1.0][knn.distance=manhattan][knn.k=4.0];[kmeans.centroids=7.0][kmeans.distance=manhattan][kmeans.initial=firstTuples][kmeans.iterations=1000]
+time:13.854000000000058
+median_time:0.007889521640091149

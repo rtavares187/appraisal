@@ -1,10 +1,14 @@
 import java.util.LinkedHashMap;
+import java.util.List;
 
 
 public class Execucao {
 	
 	private static final String SQL = "SELECT ip.id, ip.#bd_campo# FROM #bd_database_original#.#bd_table_original# ip where ip.id in ( "
 			+ "SELECT t.id FROM #bd_database_alvo#_#bd_database_alvo_percentual#.#bd_table_alvo#_#bd_table_alvo_percentual# t where t.#bd_campo# is null) "
+			+ " order by ip.id";
+	
+	private static final String SQL_2 = "SELECT ip.id, ip.#bd_campo# FROM #bd_database_original#.#bd_table_original# ip where ip.id in ( #idstrain# ) "
 			+ " order by ip.id";
 	
 	private String id_ex;
@@ -43,6 +47,27 @@ public class Execucao {
 				.replaceAll("#bd_database_alvo_percentual#", bd_database_alvo_percentual)
 				.replaceAll("#bd_table_alvo#", bd_table_alvo)
 				.replaceAll("#bd_table_alvo_percentual#", bd_table_alvo_percentual);
+		
+	}
+	
+	public String getBaseSQL2(List<String> ids){
+		
+		String idstrain = "";
+		
+		for(int i = 0; i < ids.size(); i++){
+			
+			if(i == 0)
+				idstrain += ids.get(i);
+			
+			else
+				idstrain += " ," + ids.get(i);
+			
+		}
+		
+		return SQL_2.replaceAll("#bd_campo#", bd_campo)
+				.replaceAll("#bd_database_original#", bd_database_original)
+				.replaceAll("#bd_table_original#", bd_table_original)
+				.replaceAll("#idstrain#", idstrain);
 		
 	}
 	

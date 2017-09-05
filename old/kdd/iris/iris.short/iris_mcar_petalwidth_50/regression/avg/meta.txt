@@ -1,0 +1,3 @@
+id:[avg.type=arithmetic][avg.disturb=true]
+time:0.06
+median_time:0.03

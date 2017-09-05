@@ -1,0 +1,3 @@
+id:[knn.distance=manhattan][knn.k=9.0]
+time:224.14300000000034
+median_time:0.4075327272727279
